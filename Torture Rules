@@ -86,7 +86,9 @@ EITHER
   ON Twitch Channel Point Redemption
   With title IS %Vibe Check!%
  
-# Zombie Hoarde
+# Spawn Skeleton Trap
+/summon skeleton_horse ~ ~ ~ {SkeletonTrap:1}
+
 
 
 # ON Twitch Chat Message
