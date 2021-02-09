@@ -13,23 +13,88 @@ change it to how you like.
 *#
 
 # ON Follow
+# Write What You Want To Happen Here
+ ON Twitch Follow
 
-# ON Subscription/Gift Sub
+# ON Twitch Subscription
+# Write What You Want To Happen Here
+ ON Twitch Subscription
+ WITH months >= 1
+ WITH tier = 1
+
+# Write What You Want To Happen Here
+ ON Twitch Subscription
+ WITH months >= 1
+ WITH tier = 2
+ 
+# Write What You Want To Happen Here
+ ON Twitch Subscription
+ WITH months >= 1
+ WITH tier = 3
+
+# ON Twitch Subscription Gift
+# Write What You Want To Happen Here
+ ON Twitch Subscription Gift
+ WITH amount >= 1
+ WITH tier = 1
+
+# Write What You Want To Happen Here 
+ ON Twitch Subscription Gift
+ WITH amount >= 1
+ WITH tier = 2
+
+# Write What You Want To Happen Here
+ ON Twitch Subscription Gift
+ WITH amount >= 1
+ WITH tier = 3
 
 # ON Raid
-
+# Write What You Want To Happen Here
+ ON Twitch Raid
+ WITH raider_count >= 1
+ 
 # ON Host
-
+# Write What You Want To Happen Here
+ ON Twitch Host
+ WITH viewer_count >= 1
+ 
 # ON Donation
-
+# Write What You Want To Happen Here
+ ON Donation
+ WITH amount > 1
+ 
 # ON Bits
-
+# Write What You Want To Happen Here
+ ON Twitch Bits
+ WITH donation_amount > 10
+ 
 # ON Twitch Channel Point Redemption
+# VIBE CHECK EVERYONE
+REFLECT %MC_username1, MC_username2,...%
+ EITHER
+  EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
+  OR
+  NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
+  ON Twitch Channel Point Redemption
+  With title IS %Vibe Check Everyone!%
+  
+# VIBE CHECK (CURRENT STREAMER)
+EITHER
+  EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
+  OR
+  NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
+  ON Twitch Channel Point Redemption
+  With title IS %Vibe Check!%
+ 
+# Zombie Hoarde
+
+
+# ON Twitch Chat Message
 # VIBE CHECK
 EITHER
  EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
  OR
  NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
- ON Twitch Channel Point Redemption
-
-# ON Twitch Chat Message
+ ON Twitch Chat Message
+ WITH message PREFIX %!vibecheck%
+ 
