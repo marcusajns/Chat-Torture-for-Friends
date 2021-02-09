@@ -72,31 +72,35 @@ change it to how you like.
 # VIBE CHECK EVERYONE
 REFLECT %MC_username1, MC_username2,...%
  EITHER
-  EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
+  EXECUTE %/kill% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
   OR
-  NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
+  NOTHING DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
   ON Twitch Channel Point Redemption
   With title IS %Vibe Check Everyone!%
   
 # VIBE CHECK (CURRENT STREAMER)
 EITHER
-  EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
+  EXECUTE %/kill% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
   OR
-  NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
+  NOTHING DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
   ON Twitch Channel Point Redemption
   With title IS %Vibe Check!%
  
-# Spawn Skeleton Trap
-/summon skeleton_horse ~ ~ ~ {SkeletonTrap:1}
-
-
-
+# Speed Effect
+EXECUTE %/effect give @s minecraft:speed 10 5%
+ DISPLAYING %[
+  {text:"Why are we going so fucking fast for?"}
+ ]%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Give Speed Effect%
+ 
 # ON Twitch Chat Message
 # VIBE CHECK
 EITHER
- EXECUTE %/kill% DISPLAYING %[You did NOT pass the vibe check.]%
+ EXECUTE %/kill% 
+  DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
  OR
- NOTHING DISPLAYING %[You PASSED the Vibe Check!]%
+ NOTHING
+  DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
  ON Twitch Chat Message
  WITH message PREFIX %!vibecheck%
- 
