@@ -85,6 +85,38 @@ EITHER
   NOTHING DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
   ON Twitch Channel Point Redemption
   With title IS %Vibe Check!%
+
+# Insta Kill
+BOTH INSTANTLY
+ CLEAR everything FROM armors
+ AND
+ EXECUTE %/summon lightning_bolt ~ ~ ~%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Strike Me Down%
+ 
+# Random Teleport
+EXECUTE %/spreadplayers ~ ~ 100 150 false @p%
+ %/playsound entity.endermen.teleport voice @p%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Randomly Teleport Me%
+ 
+# Tamed Dog
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
+ ON Twitch Channel Point Redemption
+ WITH title IS %Become My Dog%
+ 
+# Tamed Cat
+SUMMON minecraft:cat ~ ~ ~ %{Owner:VinicGaming,CustomName:""${actor}"",CustomNameVisible:1,Tame:1,CatType:0}%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Become My Cat%
+ 
+# Blindness
+EXECUTE %/effect give @s minecraft:blindness 15%
+ DISPLAYING %[
+  {text: ${actor} has blinded you!}
+ }%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Blind Me!%
  
 # Levitate 
 BOTH INSTANTLY
