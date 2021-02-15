@@ -110,6 +110,15 @@ SUMMON minecraft:cat ~ ~ ~ %{Owner:VinicGaming,CustomName:""${actor}"",CustomNam
  ON Twitch Channel Point Redemption
  WITH title IS %Become My Cat%
  
+# Cracked Effects
+
+EXECUTE 
+
+# Jump Boost
+EXECUTE %/effect give @s minecraft:jump_boost 30 5%
+ON Twitch Channel Point Redemption
+WITH title IS %Jump Boost%
+
 # Blindness
 EXECUTE %/effect give @s minecraft:blindness 15%
  DISPLAYING %[
