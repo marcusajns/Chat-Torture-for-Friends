@@ -17,41 +17,43 @@ change it to how you like.
  ON Twitch Follow
 
 # ON Twitch Subscription
-# Write What You Want To Happen Here
+# Tamed Dog
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription
  WITH months >= 1
  WITH tier = 1
+ WITH title IS %Become My Dog%
 
-# Write What You Want To Happen Here
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription
  WITH months >= 1
  WITH tier = 2
  
-# Write What You Want To Happen Here
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription
  WITH months >= 1
  WITH tier = 3
 
 # ON Twitch Subscription Gift
-# Write What You Want To Happen Here
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription Gift
  WITH amount >= 1
  WITH tier = 1
 
-# Write What You Want To Happen Here 
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription Gift
  WITH amount >= 1
  WITH tier = 2
 
-# Write What You Want To Happen Here
+SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}% 
  ON Twitch Subscription Gift
  WITH amount >= 1
  WITH tier = 3
 
 # ON Raid
-# Write What You Want To Happen Here
+FOR ${raiders} TIMES
+ SUMMON pilliger ~3 ~1 ~3 {HandItems:[{Count:1,id:crossbow},{}]} 
  ON Twitch Raid
- WITH raider_count >= 1
  
 # ON Host
 # Write What You Want To Happen Here
@@ -72,7 +74,7 @@ change it to how you like.
 # VIBE CHECK EVERYONE
 REFLECT %MC_username1, MC_username2,...%
  EITHER
-  EXECUTE %/kill% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
+  EXECUTE %/summon lightning_bolt ~ ~ ~% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
   OR
   NOTHING DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
   ON Twitch Channel Point Redemption
@@ -80,20 +82,12 @@ REFLECT %MC_username1, MC_username2,...%
   
 # VIBE CHECK (CURRENT STREAMER)
 EITHER
-  EXECUTE %/kill% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
+  EXECUTE %/summon lightning_bolt ~ ~ ~% DISPLAYING %[{text:"You did NOT pass the vibe check."}]%
   OR
   NOTHING DISPLAYING %[{text:"You PASSED the Vibe Check!"}]%
   ON Twitch Channel Point Redemption
   With title IS %Vibe Check!%
 
-# Insta Kill
-BOTH INSTANTLY
- CLEAR everything FROM armors
- AND
- EXECUTE %/summon lightning_bolt ~ ~ ~%
- ON Twitch Channel Point Redemption
- WITH title IS %Strike Me Down%
- 
 # Random Teleport
 EXECUTE %/spreadplayers ~ ~ 100 150 false @p%
  %/playsound entity.endermen.teleport voice @p%
@@ -116,8 +110,8 @@ EXECUTE
 
 # Jump Boost
 EXECUTE %/effect give @s minecraft:jump_boost 30 5%
-ON Twitch Channel Point Redemption
-WITH title IS %Jump Boost%
+ ON Twitch Channel Point Redemption
+ WITH title IS %Jump Boost%
 
 # Blindness
 EXECUTE %/effect give @s minecraft:blindness 15%
