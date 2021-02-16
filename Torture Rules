@@ -100,7 +100,7 @@ SUMMON minecraft:wolf ~ ~ ~ %{CustomName:"\"${actor}\"", Owner:"VinicGaming"}%
  WITH title IS %Become My Dog%
  
 # Tamed Cat
-SUMMON minecraft:cat ~ ~ ~ %{Owner:VinicGaming,CustomName:""${actor}"",CustomNameVisible:1,Tame:1,CatType:0}%
+SUMMON minecraft:cat ~ ~ ~ %{Owner:VinicGaming,CustomName:"\"${actor}\"",CustomNameVisible:1,Tame:1,CatType:0}%
  ON Twitch Channel Point Redemption
  WITH title IS %Become My Cat%
  
